@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrueOrFalse.ResultsPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#222f3e">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+                    <GradientStop Color="#4b4b4b"
+                          Offset="0.0"/>
+                    <GradientStop Color="#222f3e"
+                          Offset="0.9"/>
+                    <GradientStop Color="#222f3e"
+                          Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Frame x:Name="frameMain" BackgroundColor="#222f3e" Padding="24" CornerRadius="0">
+                <Image Source="Logo.png"/>
+            </Frame>
+
+            <StackLayout x:Name="stackInfo" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label x:Name="lblScore" HorizontalTextAlignment="Center" FontSize="30"/>
+                <Label x:Name="lblTime" HorizontalTextAlignment="Center" FontSize="30"/>
+
+                <Button Clicked="btnClose_Clicked" Text="Close" Margin="0,50,0,0" BackgroundColor="#e74c3c" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

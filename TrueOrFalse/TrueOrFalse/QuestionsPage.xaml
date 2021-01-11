@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrueOrFalse.QuestionsPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#222f3e">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+                    <GradientStop Color="#4b4b4b"
+                          Offset="0.0"/>
+                    <GradientStop Color="#222f3e"
+                          Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Frame x:Name="frameMain" BackgroundColor="#222f3e" Padding="24" CornerRadius="0">
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblScore" HorizontalOptions="StartAndExpand"/>
+                    <Label x:Name="lblCurrentQ" HorizontalOptions="CenterAndExpand"/>
+                    <Label x:Name="lblTime" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+            <StackLayout x:Name="stackMain" VerticalOptions="CenterAndExpand" Margin="25,0">
+                <Label x:Name="lblQuestion" FontSize="15" Margin="0,25,0,0" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HeightRequest="200" HorizontalTextAlignment="Center"/>
+
+                <StackLayout Orientation="Horizontal" Margin="0,40,0,0">
+                    <Button Clicked="btnTrue_Clicked" Text="True" BackgroundColor="#3498db" HeightRequest="300" WidthRequest="150"></Button>
+                    <Button Clicked="btnFalse_Clicked" Text="False" BackgroundColor="#e74c3c" HorizontalOptions="EndAndExpand" HeightRequest="300" WidthRequest="150"></Button>
+                </StackLayout>
+
+                <Label x:Name="lblCategory" Margin="0,25,0,0"/>
+                <Label x:Name="lblDifficulty"/>
+            </StackLayout>
+            
+            <Button x:Name="btnCancel" Text="Cancel" BackgroundColor="#e74c3c" Margin="0,0,20,20" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Clicked="btnCancel_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
