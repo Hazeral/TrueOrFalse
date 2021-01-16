@@ -39,12 +39,12 @@ namespace TrueOrFalse
             btnCancel.Scale = 1.5;
             btnCancel.Opacity = 0;
 
-            stackMain.ScaleTo(1, 300);
-            stackMain.FadeTo(1, 300);
-            frameMain.ScaleTo(1, 300);
-            frameMain.FadeTo(1, 300);
-            btnCancel.ScaleTo(1, 300);
-            btnCancel.FadeTo(1, 300);
+            stackMain.ScaleTo(1, 500);
+            stackMain.FadeTo(1, 500);
+            frameMain.ScaleTo(1, 500);
+            frameMain.FadeTo(1, 500);
+            btnCancel.ScaleTo(1, 500);
+            btnCancel.FadeTo(1, 500);
 
             Device.StartTimer(TimeSpan.FromSeconds(1), () => updateTime());
             soundStartFinish.Play();
@@ -54,8 +54,9 @@ namespace TrueOrFalse
         {
             elapsedTime++;
 
-            lblTime.Text = string.Format("Time: {0:00}:{1:00}", elapsedTime / 60, (elapsedTime / 60) == 0 ? elapsedTime : elapsedTime - ((elapsedTime / 60) * 60));
+            string newTime = string.Format("Time: {0:00}:{1:00}", elapsedTime / 60, (elapsedTime / 60) == 0 ? elapsedTime : elapsedTime - ((elapsedTime / 60) * 60));
             // Divided by 60 then multipled by 60 again as the remainder would be removed when divided
+            lblTime.Text = newTime;
 
             return true;
         }

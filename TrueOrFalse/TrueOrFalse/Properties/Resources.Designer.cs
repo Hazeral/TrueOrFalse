@@ -59,15 +59,5 @@ namespace TrueOrFalse.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Logo {
-            get {
-                object obj = ResourceManager.GetObject("Logo", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

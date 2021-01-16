@@ -5,15 +5,20 @@
     <Application.Resources>
 
         <Style TargetType="Label">
-            <Setter Property="TextColor" Value="#ecf0f1" />
+            <Setter Property="TextColor" Value="#34495E" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontFamily" Value="DefaultText" />
         </Style>
 
         <Style TargetType="Button">
             <Setter Property="TextColor" Value="#ecf0f1" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontFamily" Value="DefaultText" />
         </Style>
 
         <Style TargetType="Picker">
-            <Setter Property="TextColor" Value="#ecf0f1" />
+            <Setter Property="TextColor" Value="#2C3E50" />
+            <Setter Property="FontFamily" Value="DefaultText" />
         </Style>
 
     </Application.Resources>

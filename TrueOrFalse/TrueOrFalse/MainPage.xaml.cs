@@ -79,11 +79,13 @@ namespace TrueOrFalse
             stackMain.Opacity = 0;
             frameMain.Scale = 0.5;
             frameMain.Opacity = 0;
+            pathMain.Opacity = 0;
 
-            stackMain.ScaleTo(1, 300);
-            stackMain.FadeTo(1, 300);
-            frameMain.ScaleTo(1, 300);
-            frameMain.FadeTo(1, 300);
+            stackMain.FadeTo(1, 500);
+            stackMain.ScaleTo(1, 500);
+            frameMain.FadeTo(1, 500);
+            frameMain.ScaleTo(1, 500);
+            pathMain.FadeTo(1, 500);
         }
 
         private void btnBegin_Clicked(object sender, EventArgs e)
@@ -108,6 +110,7 @@ namespace TrueOrFalse
                         stackMain.FadeTo(0, 200);
                         frameMain.ScaleTo(1.3, 200);
                         frameMain.FadeTo(0, 200);
+                        pathMain.FadeTo(0, 200);
 
                         Task.Run(async () => {
                             await Task.Delay(300);

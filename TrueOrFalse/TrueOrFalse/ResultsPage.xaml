@@ -2,30 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrueOrFalse.ResultsPage"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#DCE1E3">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#222f3e">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="0,1">
-                    <GradientStop Color="#4b4b4b"
-                          Offset="0.0"/>
-                    <GradientStop Color="#222f3e"
-                          Offset="0.9"/>
-                    <GradientStop Color="#222f3e"
-                          Offset="1.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
-
-            <Frame x:Name="frameMain" BackgroundColor="#222f3e" Padding="24" CornerRadius="0">
-                <Image Source="Logo.png"/>
+        <StackLayout BackgroundColor="#DCE1E3">
+            <Path x:Name="pathMain" Fill="#1ABC9C" Aspect="Fill" Data="m1.42252,1.46086l797.00001,0l0,175.34129c-445.5,-3.7217 -342.5,66.80826 -797.00001,28.84902l0,-204.19032l0,0.00001z"/>
+            <Label Margin="0, -270, 0, 0"/> <!-- Resetting the margin -->
+            <Frame x:Name="frameMain" BackgroundColor="Transparent" Padding="24,24,24,0" CornerRadius="0" HeightRequest="150">
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                    <Label Text="True or False" HorizontalTextAlignment="Center" FontSize="60" TextColor="#ecf0f1" FontFamily="Heading" />
+                    <Label Text="by Usman" HorizontalTextAlignment="Center" TextColor="#BDC3C7" Margin="0,-15,0,0" />
+                </StackLayout>
             </Frame>
 
-            <StackLayout x:Name="stackInfo" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                <Label x:Name="lblScore" HorizontalTextAlignment="Center" FontSize="30"/>
-                <Label x:Name="lblTime" HorizontalTextAlignment="Center" FontSize="30"/>
+            <StackLayout x:Name="stackInfo" VerticalOptions="CenterAndExpand" Margin="25,0">
+                <Label Text="Score" Margin="0,35,0,0" FontSize="25" HorizontalOptions="CenterAndExpand"/>
+                <Frame Padding="0" HorizontalOptions="FillAndExpand" Margin="25,0,25,35" CornerRadius="5" OutlineColor="Transparent" BackgroundColor="Transparent" >
+                    <Frame x:Name="frmScore" Padding="0" HorizontalOptions="FillAndExpand" MinimumHeightRequest="50" HeightRequest="50" CornerRadius="5" OutlineColor="Transparent" BackgroundColor="#16A085" >
+                        <Label x:Name="lblScore" TextColor="#ECF0F1" Margin="10,5" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </Frame>
 
-                <Button Clicked="btnClose_Clicked" Text="Close" Margin="0,50,0,0" BackgroundColor="#e74c3c" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Time taken" FontSize="25" HorizontalOptions="CenterAndExpand"/>
+                <Frame Padding="0" HorizontalOptions="FillAndExpand" Margin="25,0,25,35" CornerRadius="5" OutlineColor="Transparent" BackgroundColor="Transparent" >
+                    <Frame  Padding="0" HorizontalOptions="FillAndExpand" MinimumHeightRequest="50" HeightRequest="50" CornerRadius="5" OutlineColor="Transparent" BackgroundColor="#16A085" >
+                        <Label x:Name="lblTime" TextColor="#ECF0F1" Margin="10,5" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </Frame>
+
+                <Button Clicked="btnClose_Clicked" TextTransform="None" Text="Close" Margin="0,50,0,0" BackgroundColor="#C0392B" CornerRadius="5"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
