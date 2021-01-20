@@ -113,7 +113,7 @@ namespace TrueOrFalse
                         pathMain.FadeTo(0, 200);
 
                         Task.Run(async () => {
-                            await Task.Delay(300);
+                            await Task.Delay(200);
 
                             Device.BeginInvokeOnMainThread(async () => {
                                 await Navigation.PushAsync(new QuestionsPage(apiQuestions));
