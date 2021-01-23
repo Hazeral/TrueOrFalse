@@ -66,7 +66,7 @@ namespace TrueOrFalse
             lblScore.Text = $"Score: {score}";
             lblCurrentQ.Text = string.Format("{0:00}/{1}", currentQuestion + 1, questions.Length);
             lblQuestion.Text = WebUtility.HtmlDecode(questions[currentQuestion].question);
-            lblCategory.Text = $"Category: {questions[currentQuestion].category}";
+            lblCategory.Text = $"Category: {questions[currentQuestion].category.Replace("Entertainment: ", "").Replace("Science: ", "")}";
 
             string difficulty = questions[currentQuestion].difficulty[0].ToString().ToUpper() + questions[currentQuestion].difficulty.Substring(1);
             lblDifficulty.Text = $"Difficulty: {difficulty}";
